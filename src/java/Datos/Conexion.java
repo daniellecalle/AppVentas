@@ -17,7 +17,7 @@ public class Conexion {
     private ResultSet rs;
     private Connection conexion;
 
-    public Connection Conectar() throws ClassNotFoundException {
+    public Connection Conectar() throws ClassNotFoundException, SQLException {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             conexion = DriverManager.getConnection("jdbc:sqlserver://DANIELLE:1433;"
