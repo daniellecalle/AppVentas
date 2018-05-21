@@ -26,6 +26,14 @@ public class Conexion {
         } catch (SQLException e) {
             System.out.println("Error: " + e.toString());
             return null;
+        } catch (ClassNotFoundException Nfe) {
+            System.out.print("Error: " + Nfe.toString());
+            return null;
+        } catch (Exception ex) {
+            System.out.print("Error: " + ex.toString());
+            return null;
+        }finally{
+            conexion.close();
         }
     }
 
